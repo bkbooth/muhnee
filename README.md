@@ -1,3 +1,3 @@
 # muhnee
 
-A description of muhnee
+💹 A budgeting and money management something
