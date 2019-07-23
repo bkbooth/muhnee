@@ -1,7 +1,21 @@
 {
   "name": "muhnee",
   "version": "1.0.0",
-  "main": "index.js",
   "author": "Ben Booth <bkbooth@gmail.com> (https://benbooth.dev)",
-  "license": "MIT"
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start:api": "cd api && mix phx.server",
+    "start:client": "cd client && npm run start",
+    "start": "run-p start:*",
+    "test:api": "cd api && mix test",
+    "test:client": "cd client && npm run test -- --watchAll=false",
+    "test": "run-s test:*",
+    "format:check:api": "cd api && mix format --check-formatted",
+    "format:check:client": "cd client && npm run format:check",
+    "format:check": "run-s format:check:*"
+  },
+  "dependencies": {
+    "npm-run-all": "^4.1.5"
+  }
 }
